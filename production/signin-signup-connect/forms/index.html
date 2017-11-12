@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>MangoDB: Forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link rel="stylesheet" type="text/css" href="../../css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style2.css" />
+    <script type="text/javascript" src="../../js/modernizr.custom.86080.js"></script>
+
+  
+</head>
+
+<body>
+            <!-- Codrops top bar -->
+            <div class="codrops-top" style="width: 100%; height: 30px; margin-top: -3%; margin-bottom: 1%;">
+                <a href="welcome.html" target="_blank">
+                    <strong>&laquo; Property Spy - </strong>the leading property management Application
+                </a>
+                <span class="right">
+                    <a href="#">Developed and Maintained By</a>
+                    <a href="#" target="_blank">Tebogo Ishmael</a>
+                    <a href="#">
+                        <strong style="color: snow;">All Rights Reserved @ Property Spy</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3>Pro.per.ty spy</h3></div></li>
+            <li><span>Image 02</span><div><h3>the·real·deal</h3></div></li>
+            <li><span>Image 03</span><div><h3>where·property·style</h3></div></li>
+            <li><span>Image 04</span><div><h3>it.is·all.yours</h3></div></li>
+            <li><span>Image 05</span><div><h3>come·rent·it</h3></div></li>
+            <li><span>Image 06</span><div><h3>re·lax·a·tion</h3></div></li>
+        </ul>
+    <div class="container">
+    <?php 
+    if(isset($_GET['inactive']))
+    {
+      ?>
+            <div class='alert alert-error'>
+        <button class='close' data-dismiss='alert'>&times;</button>
+        <strong>Sorry!</strong> This Account is Deactivated, use your personal email address and send a request for activation to Email: ishmael.tebogo1992@gmail or contact Cell: +267 76250638. 
+      </div>
+            <?php
+    }
+    ?>
+        <form class="form-signin" method="post">
+        <?php
+        if(isset($_GET['error']))
+    {
+      ?>
+        <div class='alert alert-error'>
+        <button class='close' data-dismiss='alert'>&times;</button>
+        <strong>Wrong Details!</strong> 
+      </div>
+            <?php
+    }
+    ?>
+  <div class="form">
+  <h1>Welcome Back!</h1>
+  <form role="form" action="/login" method="POST" name="login" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off">
+    <div class="field-wrap">
+      <div class="form-group input-group"><span id="basic-addon1" class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+        <input type="text" name="username" placeholder="Username" aria-describedby="basic-addon1" class="form-control" />
+      </div>
+    </div>
+
+    <div class="field-wrap">
+      <div class="form-group input-group"><span id="basic-addon2" class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+        <input type="password" name="password" placeholder="Password" aria-describedby="basic-addon2" autocomplete="off" class="form-control" />
+      </div>
+    </div>
+    <p class="forgot"><a href="/forgot">Forgot Password?</a></p>
+    <button type="button" class="btn btn-danger button button-block" onclick="logIn()">Log In</button>
+  </form>
+</div>
+ 
+<section class="mangas" id="manga-area"></section>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.string/3.2.3/underscore.string.min.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
